@@ -7,10 +7,10 @@ import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
  * https://api.slack.com/automation/functions/custom
  */
 export const GreetingFunctionDefinition = DefineFunction({
-  callback_id: "add_reaction",
+  callback_id: "greeting_function",
   title: "Generate a greeting",
   description: "Generate a greeting",
-  source_file: "functions/add_reaction.ts",
+  source_file: "functions/greeting_function.ts",
   input_parameters: {
     properties: {
       recipient: {

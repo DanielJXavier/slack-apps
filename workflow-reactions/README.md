@@ -1,18 +1,17 @@
-# Blank Template
+# Hello World
 
-This is a blank template used to build out automations using the Slack CLI.
+This automation demonstrates sending a greeting to channel.
 
 **Guide Outline**:
 
 - [Setup](#setup)
   - [Install the Slack CLI](#install-the-slack-cli)
-  - [Clone the Template](#clone-the-template)
+  - [Clone the Sample](#clone-the-sample)
+- [Create a Link Trigger](#create-a-link-trigger)
 - [Running Your Project Locally](#running-your-project-locally)
-- [Creating Triggers](#creating-triggers)
-- [Datastores](#datastores)
 - [Testing](#testing)
 - [Deploying Your App](#deploying-your-app)
-- [Viewing Activity Logs](#viewing-activity-logs)
+  - [Viewing Activity Logs](#viewing-activity-logs)
 - [Project Structure](#project-structure)
 - [Resources](#resources)
 
@@ -27,20 +26,20 @@ project require that the workspace be part of
 
 ### Install the Slack CLI
 
-To use this template, you need to install and configure the Slack CLI.
+To use this sample, you need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
 [Quickstart Guide](https://api.slack.com/automation/quickstart).
 
-### Clone the Template
+### Clone the Sample
 
 Start by cloning this repository:
 
 ```zsh
 # Clone this project onto your machine
-$ slack create my-app -t slack-samples/deno-blank-template
+$ slack create hello-world -t slack-samples/deno-hello-world
 
 # Change into the project directory
-$ cd my-app
+$ cd hello-world
 ```
 
 ## Running Your Project Locally
@@ -100,7 +99,7 @@ or deployed!**
 To manually create a trigger, use the following command:
 
 ```zsh
-$ slack trigger create --trigger-def triggers/<YOUR_TRIGGER_FILE>.ts
+$ slack trigger create --trigger-def triggers/greeting_trigger.ts
 ```
 
 ## Datastores
@@ -111,7 +110,9 @@ infrastructure. The use of a datastore requires the
 
 ## Testing
 
-Test filenames should be suffixed with `_test`.
+For an example of how to test a function, see
+`functions/greeting_function_test.ts`. Test filenames should be suffixed with
+`_test`.
 
 Run all tests with `deno test`:
 
