@@ -1,1 +1,11 @@
-{}
+{
+  "apps": {
+    "T02HHA0JJ": {
+      "app_id": "A06KW451TMW",
+      "IsDev": false,
+      "team_domain": "olxbrasil",
+      "team_id": "T02HHA0JJ"
+    }
+  },
+  "default": "olxbrasil"
+}
