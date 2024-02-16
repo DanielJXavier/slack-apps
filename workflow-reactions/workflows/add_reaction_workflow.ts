@@ -24,9 +24,13 @@ const inputForm = AddReactionWorkflow.addStep(
         {
           name: "message_context",
           type: Schema.types.object
+        },
+        {
+          name: "emoji_name",
+          type: Schema.types.string
         }
       ],
-      required: ["message_context"],
+      required: ["message_context", "emoji_name"],
     },
   },
 );
@@ -35,6 +39,7 @@ AddReactionWorkflow.addStep(
   AddReactionFunctionDefinition,
   {
     message_context: inputForm.outputs.fields.message_context,
+    emoji_name: inputForm.outputs.fields.emoji_name,
   },
 );
 
